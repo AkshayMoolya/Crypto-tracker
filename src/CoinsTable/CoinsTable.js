@@ -47,12 +47,12 @@ const CoinsTable = () => {
     },
   });
   useEffect(() => {
-    console.log("apple",handleSearch())
-    
-  }, [])
-  
+    console.log("apple", handleSearch());
+  }, []);
 
   const handleSearch = () => {
+    if (!Search) return coins;
+
     return coins.filter(
       (coin) =>
         coin.name.toLowerCase().includes(Search) ||
