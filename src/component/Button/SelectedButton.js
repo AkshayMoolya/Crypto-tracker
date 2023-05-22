@@ -13,7 +13,7 @@ const SelectedButton = ({ children, onClick, selected }) => {
       }}
     >
       {children}
-    </span>
+    </span> 
   );
 };
 

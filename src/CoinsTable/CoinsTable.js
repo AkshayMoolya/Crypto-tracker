@@ -18,7 +18,6 @@ import {
   createTheme,
 } from "@mui/material";
 
-
 import { useNavigate } from "react-router-dom";
 import { numberWithCommas } from "../component/Banner/Carousel";
 import { CryptoState } from "../CryptoContext";
@@ -40,6 +39,7 @@ const CoinsTable = () => {
 
   useEffect(() => {
     fetchCoins();
+    // eslint-disable-next-line
   }, [currency]);
 
   console.log(coins);
@@ -51,21 +51,10 @@ const CoinsTable = () => {
       },
     },
   });
-<<<<<<< HEAD
-
-  const handleSearch = () => {
-    if (!Search) {
-      return coins;
-    }
-=======
-  useEffect(() => {
-    console.log("apple", handleSearch());
-  }, []);
 
   const handleSearch = () => {
     if (!Search) return coins;
 
->>>>>>> origin/main
     return coins.filter(
       (coin) =>
         coin.name.toLowerCase().includes(Search) ||
@@ -140,7 +129,10 @@ const CoinsTable = () => {
                             style={{ marginBottom: 10 }}
                           />
                           <div
-                            style={{ display: "flex", flexDirection: "column" }}
+                            style={{
+                              display: "flex",
+                              flexDirection: "column",
+                            }}
                           >
                             <span
                               style={{
@@ -194,7 +186,7 @@ const CoinsTable = () => {
             },
           }}
           count={(handleSearch()?.length / 10).toFixed(0)}
-          onChange={(_,value) => {
+          onChange={(_, value) => {
             setpage(value);
             window.scroll(0, 450);
           }}

@@ -13,7 +13,7 @@ const Banner = () => {
           paddingTop: "25px",
           justifyContent: "space-around",
           alignItems: "center",
-        }}
+        }} 
       >
         <div
           className="tagLine"
